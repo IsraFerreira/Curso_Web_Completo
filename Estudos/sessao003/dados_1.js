@@ -9,3 +9,4 @@ console.log(quantidade);
 console.log(preco);
 console.log(imposto);
 console.log(precoImposto); 
+
