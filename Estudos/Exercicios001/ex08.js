@@ -10,20 +10,30 @@
 // Retorno: [3, 7] (Significa que ele bateu três vezes seu recorde de melhor pontuação e a pior pontuação
 // aconteceu no sétimo jogo.)
 
-function historico(jogos = []){
-    let resposta = []
-    let menorNota = 0
-    for(let i in jogos){
-        baixa = jogos[i]
-        if(jogos[i] < baixa){
-            menorNota = jogos[i]
-            resposta.push(jogos[i])
+function historico(jogos){
+    let pontuacoes = jogos.split(", ")
+    let recordes = 0
+    let piorJogo = 1
+    let maiorPontuacao = pontuacoes [0]
+    let menorPontuacao = pontuacoes [0]
+
+
+    for(let i = 1; i < pontuacoes.length; i++){
+        if(pontuacoes[i] > maiorPontuacao){
+            maiorPontuacao = pontuacoes[i]
+            recordes++
         }
+        else if(pontuacoes[i] < menorPontuacao){
+            menorPontuacao = pontuacoes[i]
+            piorJogo = i
+        }
+
     }
 
 
-    return console.log(resposta)
+
+    return console.log(`[${recordes}, ${piorJogo}]`)
 }
 
 
-historico(10, 20, 30, 40, 50)
+historico("20, 20, 10, 40, 50")
