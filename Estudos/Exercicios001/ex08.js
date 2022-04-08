@@ -9,9 +9,10 @@
 // String: “10 20 20 8 25 3 0 30 1”
 // Retorno: [3, 7] (Significa que ele bateu três vezes seu recorde de melhor pontuação e a pior pontuação
 // aconteceu no sétimo jogo.)
+let stringPontuacoes = "30, 40, 20, 4, 51, 25, 42, 38, 56"
 
-function historico(jogos){
-    let pontuacoes = jogos.split(", ")
+function historico(stringPontuacoes){
+    let pontuacoes = stringPontuacoes.split(", ")
     let recordes = 0
     let piorJogo = 1
     let maiorPontuacao = pontuacoes [0]
@@ -36,4 +37,4 @@ function historico(jogos){
 }
 
 
-historico("20, 20, 10, 40, 50")
+historico(stringPontuacoes)
