@@ -10,3 +10,20 @@
 // Retorno: [3, 7] (Significa que ele bateu três vezes seu recorde de melhor pontuação e a pior pontuação
 // aconteceu no sétimo jogo.)
 
+function historico(jogos = []){
+    let resposta = []
+    let menorNota = 0
+    for(let i in jogos){
+        baixa = jogos[i]
+        if(jogos[i] < baixa){
+            menorNota = jogos[i]
+            resposta.push(jogos[i])
+        }
+    }
+
+
+    return console.log(resposta)
+}
+
+
+historico(10, 20, 30, 40, 50)
