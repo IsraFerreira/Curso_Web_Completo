@@ -2,3 +2,17 @@
 // parâmetro um inteiro que representa o mês (1 - janeiro, 2 - fevereiro…) que foi paga e o valor da anuidade. A
 // anuidade deve ser paga no mês de janeiro. Por mês, é cobrado 5% de juros (sob o regime de juros
 // compostos). O retorno deve ser o valor a ser pago para o respectivo mês escolhido.
+function anuidade(x, valor){
+    if(x > 0 && x < 13){
+        atraso = x - 1
+        return (valor *((1 + (5/100))**atraso)).toFixed(2)
+    }
+    else {
+        return 'Mês inválido'
+    }
+}
+
+console.log(anuidade(2, 1000))
+
+
+
