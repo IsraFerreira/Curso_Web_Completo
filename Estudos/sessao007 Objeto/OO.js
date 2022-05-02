@@ -19,3 +19,6 @@ objeto.processamento() //foco passou a ser o objeto
 
 //Pontos importanes da linguagem orientada a objeto
 // 1. Abstração
+// 2. Encapsulamento
+// 3. Herança(prototype)
+// 4. Polimorfismo
