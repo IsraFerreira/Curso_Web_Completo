@@ -1,30 +1,21 @@
 const url = 'http://files.cod3r.com.br/curso-js/funcionarios.json'
 const axios = require('axios')
 
+
+const mulher = funcionario => funcionario.genero == 'F'
+const pais = funcionario => funcionario.pais == 'China'
+const menorSalario = (func, funcAtual) => {
+    return func.salario < funcAtual.salario ? func : funcAtual
+}
+
 axios.get(url).then(response => {
     const funcionarios = response.data
     // console.log(funcionarios)
-    const mulher = funcionario => funcionario.genero == 'M'
-    const pais = funcionario => funcionario.pais == 'China'
-    const salario = funcionario => funcionario.salario
-function sal(){
 
-}
+    const f = funcionarios.filter(mulher).filter(pais).reduce(menorSalario)
 
-    console.log(funcionarios.filter(mulher).filter(pais).reduce(sal()))
-
-
-
-
+    console.log(f)
 })
 
 // Mulher chinesa com menor salário
-
-
-
-// console.log(alunos.map(a => a.nota))
-// const resultado = alunos.map(a => a.nota).reduce(function(acumulador, atual){ //acumulador e atual são padrões
-//     console.log(acumulador, atual)
-//     return acumulador + atual
-// }, 10) //no final, depois da callback eu adiciono um valor para somar (acumulador / valor inicial)
 
