@@ -18,4 +18,3 @@ axios.get(url).then(response => {
 })
 
 // Mulher chinesa com menor salário
-
