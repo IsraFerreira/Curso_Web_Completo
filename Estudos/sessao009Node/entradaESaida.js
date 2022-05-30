@@ -7,9 +7,9 @@ if(anonimo){
 } else {
     process.stdout.write('Informe o seu nome: ')
     process.stdin.on('data', data => { //stdin.on - entrada de dados
-        const nome = data.toString().replace('\n', '')
+        const nome = data.toString().replace("\n", '')
 
-        process.stdout.write(`Olá ${nome}!! \n`) //stdout.write - saída padrão para o console
+        process.stdout.write(`Olá ${nome} ! \n`) //stdout.write - saída padrão para o console
         process.exit()
     })
 }
