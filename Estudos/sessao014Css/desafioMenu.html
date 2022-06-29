@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        *{
+        * {
             padding: 0px;
             margin: 0px;
             
@@ -17,45 +17,118 @@
             background-color: rgb(54, 54, 54);
             height: 60px;
             border-bottom: 5px solid rgb(0, 195, 255);
+
         }
 
-        .logo img {
-            position:absolute;
-            padding: 5px; 
+ 
+
+        img,
+        div,
+        nav,
+        ul,
+        a,
+        li {
+            display: inline;
+            
+        }
+
+        .logo a {
+
+        }
+
+        .logo a img {
+            padding: 5px;
             max-height: 60px;
             max-width: 250px;
             width: auto;
             height: auto;
+
         }
 
-        .menu-toggle{
+
+
+        .menu {
+
+            vertical-align: center;
+         
+
+        }
+
+        .menu ul {
+            list-style: none;
+
+        }
+
+        .menu ul li {
+            
+        }
+
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 20px;
+            font-family: "Oswald";
+            position: relative;
+            bottom: 20px;
+            margin: 5px;
+            
+        }
+
+        .menu a:hover{
+            color: black;
+            background-color: rgb(0, 195, 255);
+        }
+
+
+        .menu-toggle {
             display: none;
         }
 
-        .menu{
-            position:absolute;
-            flex: 1;
-            /* justify-content: center;
-            align-items: center; */
-        }
 
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
             .menu-toggle {
                 display: block;
                 position: relative;
                 float: right;
-        
+                top: 20px;
+                right: 15px;
+
             }
+
             .menu {
                 display: none;
             }
 
         }
 
-
-        a {
-            text-decoration: none;
+        .autenticacao {
+            position: relative;
+            float: right;
+            top: 20px;
+            right: 20px;
+            
+        
         }
+
+        .autenticacao a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Oswald';
+            padding: 10px;
+            margin-left: 15px; 
+ 
+        }
+
+        .botao {
+            background-color: rgb(218, 0, 0);
+            border-radius: 20px;
+        }
+
+        @media (max-width: 770px) {
+            .autenticacao {
+                 display: none;
+                }
+            }
     </style>
 </head>
 
