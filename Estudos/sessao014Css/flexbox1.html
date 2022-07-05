@@ -18,13 +18,16 @@
         }
 
         .flex-container {
-            display: flex;
-            flex-direction: column;
-            flex-direction: column-reverse;
-            flex-direction: row-reverse;
-            flex-direction: row;
+            display: flex; /*para o conteiner*/
+            flex-direction: column; /* muda a direção do eixo principal (padrão: mobile - column / web - row)*/
+            flex-direction: column-reverse; /* em columa, porem de baixo para cima */
+            flex-direction: row-reverse; /* em linha, porem da direita para a esquerda*/
+            flex-direction: row;  /*Muda a direção do main axis para linha*/
+
             width: 50%;
-            flex-wrap: wrap;
+
+            flex-wrap: wrap; /*quebra linha*/
+            flex-wrap: nowrap; /*nao quebra linha*/
             flex-wrap: wrap-reverse;
             flex-flow: row wrap;
             height: 200px;
@@ -32,28 +35,51 @@
             flex-flow: row wrap;
 
 
-            justify-content: flex-start;
-            justify-content: flex-end;
-            justify-content: center;
-            justify-content: space-around;
+            justify-content: flex-start; /*alinha os itens no eixo principal, nao importando se é linha ou coluna (no caso no inicio)*/
+            justify-content: flex-end; /*alinha no final da linha / coluna*/
+            justify-content: center; /*alinha na ordem definida, no centro*/
+            justify-content: space-around; /* vai ter espaços antes do primeiro e depois do segundo */
             flex-direction: row-reverse;
-            justify-content: space-between;
+            justify-content: space-between;/*primeiro e o ultimo nas pontas, e o meio no meio*/
 
             
             /* Cross Axis */
             height: 400px;
-            align-items: stretch;
-            align-items: baseline;
-            align-items: flex-start;
-            align-items: flex-end;
-            align-items: center;
+            /*Alinha no Cross Axis, no eixo contrario */
+            align-items: stretch; /*Estica os componentes para ocupar todo o cross axis (em caso de align-content será o espaço da linha)*/
+            align-items: baseline; /*Pesa a base e alinha*/
+            align-items: flex-start; /*No inicio da coluna*/
+            align-items: flex-end; /*No final da coluna*/
+            align-items: center; /*No centro da coluna*/
 
-            /* Mais de uma linha */
-            align-content: flex-start;
-            align-content: flex-end;
-            align-content: center;
-            align-content: space-around;
-            align-content: space-between;
+            /* Alinhar multiplas linhas na aplicação */
+            /*Fala como será alinhado o flex wrap*/
+            align-content: flex-start;/*nas linhas do começo*/
+            align-content: flex-end; /*nas linhas parte de baixo*/
+            align-content: center; /*No centro */
+            align-content: space-around; /*Quebrar as linhas com espaços antes do primeiro e depois do ultimo, e no meio*/
+            align-content: space-between; /*A primeira no começo, a ultima no final, e um espaço no meio*/
+
+
+            /* 
+            Nos flex itens 
+            Align-self: alinhamento especifico para um item
+            Align-self: flex-start; alinha um item no começo da cross axis
+            Align-self: flex-center; alinha um item no meio da cross axis
+             Align-self: flex-end; alinha um item no final da cross axis
+             align-self: stretch; ocupa todo o cross axis
+            align self sobescreve o align itens 
+              */
+
+             /* 
+             flex-grow: ; (ou apenas "flex" - que tambem chama o shrink (que diminui) cresce um item)  
+             flex-grow: 1; Todo o espaço restante é ocupado por um elemento (sendo ele o unico a ter grow)
+
+
+             flex-basis: 100px; Define a base para uma area do flex box
+
+             */
+
 
         }
     </style>
