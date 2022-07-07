@@ -22,6 +22,45 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body{ /**/
+            display: grid; /* trabalha com 2 dimesões */
+            grid-template-columns: 50% 50%; /*organização das colunas*/
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);
+            grid-template-columns: repeat(12, 8.33%); /*tem 12 colunas, cada uma com 8.33% da tela*/
+            grid-template-columns: repeat(11, 100px) 100px; /*tenho 11 colunas com 100px e o resto com 100px*/
+            /*minmax (100px, 300px) - quero que minha coluna tenha no minimo 100px e máximo de 300px*/
+            grid-template-columns: 200px 20% 1fr; /*terei 3 colunas para meus elementos, a primeira com 200px, a segunda com 20% da tela e a terceira com 1 fragmento, pegando o resto que está sobrando*/
+            grid-template-columns: 3fr 6fr 3fr;
+            grid-template-rows: 50% 25% 12.5% 12.5%; /*Porcentagens do tamanho de tela para cada linha*/
+            grid-template-rows: 100px 1fr; /*100px na primeira linha e 1fr pra segunda(pegando o maximo possivel), as outras vão pegar o espaço que sobrar*/
+            grid-template-rows: 100px auto; /*as 3 linhas restantes ficam de forma igualitaria*/
+
+
+        }
+
+        .d8 {
+            grid-column-start: 2; /*Iniciar a partir da linha de coluna 2*/
+            grid-column-end: 4;/*Ele termina na linha de coluna 4*/
+            grid-column-end: span 2; /*começe na linha 2 e dê span de 2 casas*/
+            grid-row-start: 3;
+            grid-row-end: 5;
+            grid-row-end: span 2;
+
+        }
+
+        .d10, .d11 {
+            /*Podem se sobrepor*/
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: span 1;
+        }
+
+        .d10{
+            z-index: 10; /*Profundidade dos elementos, quem fica na frente, z-index maior faz o 10 ficar na frente */
+        }
+
     </style>
 </head>
 
