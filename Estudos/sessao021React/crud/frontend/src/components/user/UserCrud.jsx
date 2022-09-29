@@ -12,7 +12,6 @@ export default class UserCrud extends Component {
         return (
             <Main { ...headerProps } >
                 Cadastro de Usuário
-            </Main>
-        )
+            </Main> )
     }
 }
