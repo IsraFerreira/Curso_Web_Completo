@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route } from 'react-router-dom'
 // import { Switch, Route, Redirect } from 'react-router'
 
 import Home from '../components/home/Home'
@@ -10,10 +10,5 @@ export default props => (
     <Route exact path="/" element={<Home />} />
     <Route path="/users" element={<UserCrud />} />
     <Route path="*" element={<Home />} />
-    </Routes> )
-
-{/* <Switch>
-<Route exact path='/' component={Home} />
-<Route path='/users' component={UserCrud} />
-<Redirect from='*' to='/' />
-</Switch> */}
+    </Routes> 
+ )
