@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Calculator from "./main/Calculator"
+import Calculator from "./main/Calculator-vue"
 export default {
     components: { Calculator }
 }
