@@ -22,7 +22,7 @@
     },
     {
       "name": "Veio de formulario",
-      "price": "9.99",
+      "price": "9.98",
       "id": 5
     },
     {
@@ -36,8 +36,8 @@
       "id": 7
     },
     {
-      "name": "Lápis Preto",
-      "price": "12.50",
+      "name": "Lápis Preto Básico",
+      "price": "1.50",
       "id": 8
     }
   ]
