@@ -1,11 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Caneta BIC Preta",
-      "price": 5.89
-    },
-    {
       "id": 2,
       "name": "Notebook Mac Pro",
       "price": 12000.89
@@ -21,8 +16,8 @@
       "id": 4
     },
     {
-      "name": "Veio de formulario",
-      "price": "9.98",
+      "name": "Garrafa 500 ml",
+      "price": "6.99",
       "id": 5
     },
     {
@@ -39,6 +34,11 @@
       "name": "Lápis Preto Básico",
       "price": "1.50",
       "id": 8
+    },
+    {
+      "name": "Microondas",
+      "price": "499.99",
+      "id": 9
     }
   ]
 }
