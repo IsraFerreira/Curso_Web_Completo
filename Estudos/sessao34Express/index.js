@@ -1,7 +1,18 @@
 const express = require('express')
 const app = express()
 
-app.all('/opa' ,(req, res) => {
+const saudacao = require('./saudacaoMid')
+
+app.use(saudacao('Guilherme'))
+
+app.use((req, res, next) => {
+    console.log('Antes')
+    next()
+})
+
+
+app.all('/opa' ,(req, res, next) => {
+    console.log('Durante')
     res.json({
         data: [
             {id: 7, name: 'Ana', position: 1},
@@ -14,6 +25,8 @@ app.all('/opa' ,(req, res) => {
         status: 200
     })
 
+    next()
+
     // res.json({
     //     name: 'iPad 32Gb',
     //     price: 1899.00,
@@ -23,6 +36,11 @@ app.all('/opa' ,(req, res) => {
 
     //res.send('<h1>Estou bem!</h1><br><br><h2>Tipo é HTML!</h2>')
 })
+
+app.use((req, res) => {
+    console.log('Depois')
+})
+
 
 app.listen(3000, () => {
     console.log('Backend executando...')
